@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include "../Demo_main/Car.h"
 
 using namespace car;
@@ -6,13 +6,13 @@ using namespace car;
 int main() {
 	try {
 		car::Car c1("Toyota", "Camry", "1234VIN", "2023");
-        std::cout << "Áðåíä àâòîìîáèëÿ: " << c1.GetBrand() << std::endl;
-        std::cout << "Ìàðêà àâòîìîáèëÿ: " << c1.GetModel() << std::endl;
-        std::cout << "VIN íîìåð àâòîìîáèëÿ: " << c1.GetVIN() << std::endl;
-        std::cout << "Ãîä âûïóñêà àâòîìîáèëÿ: " << c1.GetYearRelease() << std::endl;
+        std::cout << "Ð‘Ñ€ÐµÐ½Ð´ Ð°Ð²Ñ‚Ð¾Ð¼Ð¾Ð±Ð¸Ð»Ñ: " << c1.GetBrand() << std::endl;
+        std::cout << "ÐœÐ°Ñ€ÐºÐ° Ð°Ð²Ñ‚Ð¾Ð¼Ð¾Ð±Ð¸Ð»Ñ: " << c1.GetModel() << std::endl;
+        std::cout << "VIN Ð½Ð¾Ð¼ÐµÑ€ Ð°Ð²Ñ‚Ð¾Ð¼Ð¾Ð±Ð¸Ð»Ñ: " << c1.GetVIN() << std::endl;
+        std::cout << "Ð“Ð¾Ð´ Ð²Ñ‹Ð¿ÑƒÑÐºÐ° Ð°Ð²Ñ‚Ð¾Ð¼Ð¾Ð±Ð¸Ð»Ñ: " << c1.GetYearRelease() << std::endl;
     }
     catch (const std::exception& ex) {
-        std::cerr << "Îøèáêà: " << ex.what() << std::endl;
+        std::cerr << "ÐžÑˆÐ¸Ð±ÐºÐ°: " << ex.what() << std::endl;
     }
 
     return 0;

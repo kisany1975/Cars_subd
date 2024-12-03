@@ -1,4 +1,4 @@
-#include <iostream>
+п»ї#include <iostream>
 #include "Car.h"
 #include <cstring>
 #include <regex>
@@ -7,11 +7,11 @@ namespace car {
 
 	Car::Car(const std::string& b, const std::string& m, const std::string& V, const std::string& yR) : brand(b), model(m), VIN(V), yearRelease(yR) {
         if (brand.empty() || model.empty() || VIN.empty()) {
-            throw std::invalid_argument("Эти поля не могут быть пустыми!");
+            throw std::invalid_argument("Р­С‚Рё РїРѕР»СЏ РЅРµ РјРѕРіСѓС‚ Р±С‹С‚СЊ РїСѓСЃС‚С‹РјРё!");
         }
         std::regex datePattern("\\d{4}");
         if (!std::regex_match(yearRelease, datePattern)) {
-            throw std::invalid_argument("Год выпуска должен быть в формате гггг.");
+            throw std::invalid_argument("Р“РѕРґ РІС‹РїСѓСЃРєР° РґРѕР»Р¶РµРЅ Р±С‹С‚СЊ РІ С„РѕСЂРјР°С‚Рµ РіРіРіРі.");
         }
 	}
     std::string Car::GetBrand() const {
@@ -32,21 +32,21 @@ namespace car {
 
     void Car::SetBrand(const std::string& b) {
         if (b.empty()) {
-            throw std::invalid_argument("Бренд не может быть пустым.");
+            throw std::invalid_argument("Р‘СЂРµРЅРґ РЅРµ РјРѕР¶РµС‚ Р±С‹С‚СЊ РїСѓСЃС‚С‹Рј.");
         }
         brand = b;
     }
 
     void Car::SetModel(const std::string& m) {
         if (m.empty()) {
-            throw std::invalid_argument("Модель не может быть пустая.");
+            throw std::invalid_argument("РњРѕРґРµР»СЊ РЅРµ РјРѕР¶РµС‚ Р±С‹С‚СЊ РїСѓСЃС‚Р°СЏ.");
         }
         model = m;
     }
 
     void Car::SetVIN(const std::string& V) {
         if (V.empty()) {
-            throw std::invalid_argument("VIN не может быть пустым.");
+            throw std::invalid_argument("VIN РЅРµ РјРѕР¶РµС‚ Р±С‹С‚СЊ РїСѓСЃС‚С‹Рј.");
         }
         VIN = V;
     }
@@ -54,7 +54,7 @@ namespace car {
     void Car::SetYearRelease(const std::string& yR) {
         std::regex datePattern("\\d{4}");
         if (!std::regex_match(yearRelease, datePattern)) {
-            throw std::invalid_argument("Год выпуска должен быть в формате гггг.");
+            throw std::invalid_argument("Р“РѕРґ РІС‹РїСѓСЃРєР° РґРѕР»Р¶РµРЅ Р±С‹С‚СЊ РІ С„РѕСЂРјР°С‚Рµ РіРіРіРі.");
         }
         yearRelease = yR;
     }
